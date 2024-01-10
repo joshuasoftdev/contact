@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>contact info</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="preload" href="./images/justin.jpg" as="image" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        VANTA.FOG({
+          el: "#vanta",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: true,
+          minHeight: 760.0,
+          minWidth: 200.0,
+          highlightColor: 0xff45,
+          midtoneColor: 0xee00ff,
+          lowlightColor: 0xff39,
+          baseColor: 0x32f79,
+          speed: 8.8,
+          zoom: 3.0,
+        });
+
+        setTimeout(() => {
+          const main = document.querySelector("main");
+          main.style.opacity = 1;
+          main.style.filter = "blur(0px)";
+        }, 1000);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="vanta">
+      <main class="animated" id="shake">
+        <header class="main">
+          <img src="./images/justin.jpg" />
+          <h1>@JustinCooper</h1>
+          <svg id="rotatingText" viewBox="0 0 200 200" width="232" height="232">
+            <defs>
+              <path
+                id="circle"
+                d="M 100, 100
+            m -75, 0
+            a 75, 75 0 1, 0 150, 0
+            a 75, 75 0 1, 0 -150, 0
+            "
+              ></path>
+            </defs>
+            <text width="400">
+              <textPath
+                alignment-baseline="top"
+                xlink:href="#circle"
+                class="text"
+              >
+                JUSTIN COOPER & JOSHUA JACOBS
+              </textPath>
+            </text>
+          </svg>
+        </header>
+        <ul>
+          <li class="shake-left">
+            <a href="https://www.facebook.com/profile.php?id=61554161724436">
+              <img src="./images/homepage.svg" alt="Homepage" width="20" />
+              Official Website
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/">
+              <img src="./images/youtube.svg" alt="YouTube" width="20" />
+              YouTube
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/WebDevJayy">
+              <img src="./images/twitter.svg" alt="Twitter" width="20" />
+              Twitter
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/joshuasoftdev">
+              <img src="./images/github.svg" alt="GitHub" width="20" />
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a href="(916)301-6832">
+              <img
+                src="./images/phone-calling-rounded-svgrepo-com.svg"
+                alt="Phone"
+                width="20"
+              />
+              Call Me
+            </a>
+          </li>
+        </ul>
+      </main>
+    </div>
+  </body>
+</html>
